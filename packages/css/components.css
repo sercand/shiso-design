@@ -41,6 +41,8 @@
   min-width: 0;
 }
 .s-inset { background: var(--shiso-fill); border-radius: var(--shiso-radius-inner); padding: var(--shiso-space-1) var(--shiso-space-3); }
+/* Fields inside an inset sit on the fill, so they take the card color to stay visible. */
+.s-inset .s-input, .s-inset .s-select, .s-inset .s-textarea { background: var(--shiso-card); }
 
 /* Button */
 .s-btn {
