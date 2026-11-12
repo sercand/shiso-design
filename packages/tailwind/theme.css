@@ -78,6 +78,11 @@
   --color-shiso-warn-bg: var(--shiso-warn-bg);
   --color-shiso-bad: var(--shiso-bad);
   --color-shiso-bad-bg: var(--shiso-bad-bg);
+  --color-shiso-chart-1: var(--shiso-chart-1);
+  --color-shiso-chart-2: var(--shiso-chart-2);
+  --color-shiso-chart-3: var(--shiso-chart-3);
+  --color-shiso-chart-4: var(--shiso-chart-4);
+  --color-shiso-chart-5: var(--shiso-chart-5);
   /* Radius: one step per role. Everything from 2xl up is the card radius, so legacy large radii stay soft. */
   --radius-sm: var(--shiso-radius-sm);
   --radius-md: 8px;

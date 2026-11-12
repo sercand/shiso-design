@@ -20,6 +20,11 @@ export const colors = {
     warnBg: "#fdedc9",
     bad: "#c51e21",
     badBg: "#ffe9e6",
+    chart1: "#10764d",
+    chart2: "#3a61c4",
+    chart3: "#b5820c",
+    chart4: "#a13170",
+    chart5: "#178eab",
   },
   dark: {
     canvas: "#090c10",
@@ -41,6 +46,11 @@ export const colors = {
     warnBg: "#3a2b0d",
     bad: "#fc8179",
     badBg: "#47211e",
+    chart1: "#35aa76",
+    chart2: "#5c77df",
+    chart3: "#b58913",
+    chart4: "#b94082",
+    chart5: "#3da2be",
   },
 } as const;
 export const fonts = {

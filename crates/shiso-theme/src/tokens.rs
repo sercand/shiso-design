@@ -22,6 +22,11 @@ pub struct Palette {
     pub warn_bg: [u8; 3],
     pub bad: [u8; 3],
     pub bad_bg: [u8; 3],
+    pub chart_1: [u8; 3],
+    pub chart_2: [u8; 3],
+    pub chart_3: [u8; 3],
+    pub chart_4: [u8; 3],
+    pub chart_5: [u8; 3],
 }
 
 pub const LIGHT: Palette = Palette {
@@ -44,6 +49,11 @@ pub const LIGHT: Palette = Palette {
     warn_bg: [253, 237, 201],
     bad: [197, 30, 33],
     bad_bg: [255, 233, 230],
+    chart_1: [16, 118, 77],
+    chart_2: [58, 97, 196],
+    chart_3: [181, 130, 12],
+    chart_4: [161, 49, 112],
+    chart_5: [23, 142, 171],
 };
 
 pub const DARK: Palette = Palette {
@@ -66,6 +76,11 @@ pub const DARK: Palette = Palette {
     warn_bg: [58, 43, 13],
     bad: [252, 129, 121],
     bad_bg: [71, 33, 30],
+    chart_1: [53, 170, 118],
+    chart_2: [92, 119, 223],
+    chart_3: [181, 137, 19],
+    chart_4: [185, 64, 130],
+    chart_5: [61, 162, 190],
 };
 
 /// Sizes that change with density, in logical pixels.

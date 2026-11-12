@@ -19,6 +19,11 @@
   --shiso-warn-bg: oklch(0.95 0.05 88);
   --shiso-bad: oklch(0.53 0.2 27);
   --shiso-bad-bg: oklch(0.95 0.03 27);
+  --shiso-chart-1: oklch(0.5 0.12 160);
+  --shiso-chart-2: oklch(0.52 0.16 265);
+  --shiso-chart-3: oklch(0.64 0.13 80);
+  --shiso-chart-4: oklch(0.5 0.16 350);
+  --shiso-chart-5: oklch(0.6 0.11 220);
   --shiso-shadow: 0 1px 2px 0px oklch(0.21 0.025 255 / 0.06), 0 10px 28px -14px oklch(0.21 0.025 255 / 0.16);
 
   --shiso-font-sans: "Hanken Grotesk", ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
@@ -86,6 +91,11 @@
     --shiso-warn-bg: oklch(0.3 0.05 82);
     --shiso-bad: oklch(0.74 0.16 25);
     --shiso-bad-bg: oklch(0.3 0.06 25);
+    --shiso-chart-1: oklch(0.66 0.13 160);
+    --shiso-chart-2: oklch(0.6 0.16 270);
+    --shiso-chart-3: oklch(0.655 0.13 85);
+    --shiso-chart-4: oklch(0.56 0.17 350);
+    --shiso-chart-5: oklch(0.665 0.1 220);
     --shiso-shadow: 0 0 0 1px oklch(1 0 0 / 0.05);
     color-scheme: dark;
   }
@@ -110,6 +120,11 @@
   --shiso-warn-bg: oklch(0.3 0.05 82);
   --shiso-bad: oklch(0.74 0.16 25);
   --shiso-bad-bg: oklch(0.3 0.06 25);
+  --shiso-chart-1: oklch(0.66 0.13 160);
+  --shiso-chart-2: oklch(0.6 0.16 270);
+  --shiso-chart-3: oklch(0.655 0.13 85);
+  --shiso-chart-4: oklch(0.56 0.17 350);
+  --shiso-chart-5: oklch(0.665 0.1 220);
   --shiso-shadow: 0 0 0 1px oklch(1 0 0 / 0.05);
   color-scheme: dark;
 }

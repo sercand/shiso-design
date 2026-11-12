@@ -40,6 +40,7 @@ Never hard-code a color, font, radius or control height; if a value is missing, 
 | `soft` / `soft-text` | A tinted, low-emphasis accent: avatars, in-progress pills |
 | `live` | Only for "an agent is working right now" |
 | `ok`, `warn`, `bad` (+ `-bg`) | Status. Never used as decoration, never as the accent |
+| `chart-1` … `chart-5` | Chart series and categories: green, indigo, gold, plum, sky. Assign in this order and keep a series on the same color everywhere. Status colors are never series colors |
 
 ## Rules
 
@@ -52,7 +53,8 @@ Never hard-code a color, font, radius or control height; if a value is missing, 
 7. Sentence case everywhere. Buttons say what happens ("Approve", "Save changes"), never "OK" or "Submit".
 8. Every screen must read correctly in light and dark. Check both before finishing.
 9. Touch targets are at least 44px on mobile even when the control is drawn smaller.
-10. Icons are Lucide, 1.75px stroke, sized to the text (about 1.15em).
+10. In charts, the mark carries the series color; numbers, labels and legends stay in `text` or `text-2`. More than five series fold into "Other".
+11. Icons are Lucide, 1.75px stroke, sized to the text (about 1.15em).
 
 ## Per platform
 
