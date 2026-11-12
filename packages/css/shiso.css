@@ -244,14 +244,16 @@
 .s-pill--live { color: var(--shiso-text); }
 .s-pill--live::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--shiso-live); box-shadow: 0 0 0 3px color-mix(in oklch, var(--shiso-live) 25%, transparent); }
 
-/* Segmented control */
+/* Segmented control: buttons for in-page views, links for routed tabs */
 .s-seg { display: inline-flex; gap: 2px; padding: 3px; max-width: 100%; background: var(--shiso-fill); border-radius: var(--shiso-radius-control); }
-.s-seg button {
-  font: inherit; font-weight: var(--shiso-weight-medium); border: 0; background: transparent; cursor: pointer;
+.s-seg button, .s-seg a {
+  font: inherit; font-weight: var(--shiso-weight-medium); border: 0; background: transparent; cursor: pointer; white-space: nowrap;
   color: var(--shiso-text-2); height: calc(var(--shiso-control) - 8px); padding: 0 12px;
+  display: inline-flex; align-items: center; text-decoration: none;
   border-radius: calc(var(--shiso-radius-control) - 3px);
 }
-.s-seg button[aria-pressed="true"], .s-seg button[aria-selected="true"] { background: var(--shiso-card); color: var(--shiso-text); box-shadow: var(--shiso-shadow); }
+.s-seg button:hover, .s-seg a:hover { color: var(--shiso-text); text-decoration: none; }
+.s-seg button[aria-pressed="true"], .s-seg button[aria-selected="true"], .s-seg a[aria-current] { background: var(--shiso-card); color: var(--shiso-text); box-shadow: var(--shiso-shadow); }
 
 /* Table */
 .s-table-wrap { overflow-x: auto; }
