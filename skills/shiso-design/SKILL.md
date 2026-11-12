@@ -56,7 +56,7 @@ Never hard-code a color, font, radius or control height; if a value is missing, 
 
 ## Per platform
 
-**HTML.** Put `class="shiso"` on `<body>`. Theme follows the system; pin it with `data-theme="light|dark"` on `<html>` (the `.dark` class also works). Density with `data-density="compact|comfortable"`. Classes are `s-*`: `s-btn s-btn--primary`, `s-input`, `s-card`, `s-pill s-pill--warn s-pill--dot`, `s-seg`, `s-table`, `s-shell`.
+**HTML.** Put `class="shiso"` on `<body>`. Theme follows the system; pin it with `data-theme="light|dark"` on `<html>` (the `.dark` class also works). Density with `data-density="compact|comfortable"`. Classes are `s-*`: `s-btn s-btn--primary`, `s-input`, `s-card`, `s-pill s-pill--warn s-pill--dot`, `s-seg`, `s-table`, `s-shell`, `s-chip` (filter toggle), `s-alert s-alert--bad`, `s-code`, `s-facts`, `s-topbar`, `s-btn--sm`. A card that is a link is `<a class="s-card">`.
 
 **Tailwind / shadcn.** Import the tokens and the theme; existing shadcn classes (`bg-background`, `text-muted-foreground`, `bg-primary`) then resolve to Shiso tokens. Extra roles are `bg-shiso-soft`, `text-shiso-live`, and so on.
 

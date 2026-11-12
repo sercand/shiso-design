@@ -268,6 +268,54 @@
 .s-meter > span { display: block; height: 100%; border-radius: inherit; background: var(--shiso-primary); }
 .s-avatar { width: 36px; height: 36px; flex: none; border-radius: 50%; display: grid; place-items: center; background: var(--shiso-soft); color: var(--shiso-soft-text); font-weight: var(--shiso-weight-semibold); }
 
+/* Small button: table rows and dense toolbars */
+.s-btn--sm { height: calc(var(--shiso-control) - 6px); padding: 0 10px; font-size: var(--shiso-text-sm); border-radius: calc(var(--shiso-radius-control) - 2px); }
+
+/* A whole card that is a link */
+a.s-card, a.s-card:hover { color: inherit; text-decoration: none; }
+a.s-card { transition: box-shadow 0.15s; }
+a.s-card:hover, a.s-card:focus-visible { box-shadow: var(--shiso-shadow), 0 0 0 2px var(--shiso-soft); }
+
+/* Chip: a filter you switch on and off (aria-pressed). Not a status; use a pill for that. */
+.s-chip {
+  font: inherit; font-size: 0.92em; font-weight: var(--shiso-weight-medium); cursor: pointer; white-space: nowrap;
+  display: inline-flex; align-items: center; gap: 6px;
+  height: calc(var(--shiso-control) - 4px); padding: 0 12px;
+  border: 0; border-radius: var(--shiso-radius-full);
+  background: var(--shiso-card); color: var(--shiso-text); box-shadow: var(--shiso-shadow);
+}
+.s-chip:hover { background: var(--shiso-fill); }
+.s-chip > span { color: var(--shiso-text-2); font-variant-numeric: tabular-nums; }
+.s-chip[aria-pressed="true"] { background: var(--shiso-primary); color: var(--shiso-primary-text); box-shadow: none; }
+.s-chip[aria-pressed="true"] > span { color: inherit; opacity: 0.8; }
+
+/* Alert: a message inside the page. Default is informational. */
+.s-alert {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 12px;
+  padding: 10px 14px; border-radius: var(--shiso-radius-inner);
+  background: var(--shiso-soft); color: var(--shiso-soft-text);
+}
+.s-alert--ok { background: var(--shiso-ok-bg); color: var(--shiso-ok); }
+.s-alert--warn { background: var(--shiso-warn-bg); color: var(--shiso-warn); }
+.s-alert--bad { background: var(--shiso-bad-bg); color: var(--shiso-bad); }
+
+/* Code: inline and block */
+.shiso code { font-family: var(--shiso-font-mono); font-size: 0.92em; }
+.s-code {
+  margin: 0; padding: var(--shiso-space-3); overflow-x: auto;
+  background: var(--shiso-fill); border-radius: var(--shiso-radius-inner);
+  font-family: var(--shiso-font-mono); font-size: 0.92em; line-height: 1.5;
+}
+
+/* Facts: a small label over its value, laid out in columns */
+.s-facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 10px 16px; margin: 0; }
+.s-facts > div { min-width: 0; }
+.s-facts dt { font-size: var(--shiso-text-sm); color: var(--shiso-text-2); }
+.s-facts dd { margin: 0; font-weight: var(--shiso-weight-medium); overflow-wrap: anywhere; }
+
+/* Top bar for pages without a sidebar */
+.s-topbar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--shiso-space-2) var(--shiso-space-4); padding: var(--shiso-space-3) var(--shiso-pad); }
+
 /* App shell: sidebar sits on the canvas, content cards float above it */
 .s-shell { display: grid; grid-template-columns: 220px minmax(0, 1fr); min-height: 100%; }
 .s-side { padding: var(--shiso-space-3) var(--shiso-space-2); display: flex; flex-direction: column; gap: var(--shiso-space-3); border-right: 1px solid var(--shiso-line); }
