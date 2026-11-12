@@ -112,11 +112,20 @@ ${Object.entries(shadcn).map(([k, v]) => `  --${k}: var(--shiso-${v});`).join("\
   --font-mono: var(--shiso-font-mono);
 ${Object.keys(shadcn).map((k) => `  --color-${k}: var(--${k});`).join("\n")}
 ${Object.keys(light).map((k) => `  --color-shiso-${k}: var(--shiso-${k});`).join("\n")}
+  /* Radius: one step per role. Everything from 2xl up is the card radius, so legacy large radii stay soft. */
   --radius-sm: var(--shiso-radius-sm);
-  --radius-md: var(--shiso-radius-control);
+  --radius-md: 8px;
   --radius-lg: var(--shiso-radius-control);
-  --radius-xl: var(--shiso-radius-card);
+  --radius-xl: 12px;
   --radius-2xl: var(--shiso-radius-card);
+  --radius-3xl: var(--shiso-radius-card);
+  --radius-4xl: var(--shiso-radius-card);
+  --radius-control: var(--shiso-radius-control);
+  --radius-card: var(--shiso-radius-card);
+  /* Density: h-control / size-control follow data-density; text-sm is the base UI text size. */
+  --spacing-control: var(--shiso-control);
+  --text-sm: var(--shiso-text-base);
+  --text-sm--line-height: 1.45;
   --shadow-card: var(--shiso-shadow);
 }
 `;
