@@ -1,0 +1,14 @@
+[package]
+name = "shiso-theme"
+version = "0.1.0"
+description = "Shiso design tokens for Rust, with an optional egui theme."
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+
+[features]
+default = []
+egui = ["dep:egui"]
+
+[dependencies]
+egui = { version = "0.37", optional = true, default-features = false }

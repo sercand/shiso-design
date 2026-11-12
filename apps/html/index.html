@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shiso Design: HTML demo</title>
+<link rel="stylesheet" href="../../packages/css/fonts.css">
+<link rel="stylesheet" href="../../packages/css/shiso.css">
+<style>
+  /* Demo-only layout. Everything visual comes from shiso.css. */
+  html, body { height: 100%; }
+  .demo-top { display: flex; flex-wrap: wrap; align-items: center; gap: var(--shiso-space-2); }
+  .demo-logo { width: 26px; height: 26px; border-radius: var(--shiso-radius-sm); background: var(--shiso-primary); color: var(--shiso-primary-text); display: grid; place-items: center; font-weight: 700; }
+  .demo-ws { display: flex; align-items: center; gap: 9px; padding: 4px 8px; font-weight: 600; }
+  .demo-search { width: 220px; max-width: 100%; }
+  .demo-wide { grid-column: 1 / -1; }
+  .demo-swatches { display: grid; grid-template-columns: repeat(auto-fill, minmax(96px, 1fr)); gap: 10px; }
+  .demo-swatches div { display: grid; gap: 4px; font-size: var(--shiso-text-sm); color: var(--shiso-text-2); }
+  .demo-swatches i { height: 40px; border-radius: var(--shiso-radius-sm); border: 1px solid var(--shiso-line); }
+</style>
+</head>
+<body class="shiso">
+<div class="s-shell">
+  <aside class="s-side">
+    <div class="demo-ws"><span class="demo-logo">K</span> Kumo Games</div>
+    <nav class="s-nav" aria-label="Main">
+      <a href="#">Home</a>
+      <a href="#" aria-current="page">Approvals <span class="s-count">3</span></a>
+      <a href="#">Tickets</a>
+      <a href="#">Agents</a>
+      <a href="#">Changes</a>
+      <a href="#">Drive</a>
+    </nav>
+    <div class="s-spacer"></div>
+    <div class="s-stack" style="gap: var(--shiso-space-2)">
+      <div class="s-seg" role="group" aria-label="Theme">
+        <button type="button" data-theme-btn="system" aria-pressed="true">System</button>
+        <button type="button" data-theme-btn="light" aria-pressed="false">Light</button>
+        <button type="button" data-theme-btn="dark" aria-pressed="false">Dark</button>
+      </div>
+      <div class="s-seg" role="group" aria-label="Density">
+        <button type="button" data-density-btn="compact" aria-pressed="true">Compact</button>
+        <button type="button" data-density-btn="comfortable" aria-pressed="false">Comfortable</button>
+      </div>
+    </div>
+  </aside>
+
+  <main class="s-main">
+    <div class="demo-top">
+      <h1 class="s-h1">Waiting on you</h1>
+      <span class="s-spacer"></span>
+      <input class="s-input demo-search" id="search" type="search" placeholder="Search" aria-label="Search">
+      <button class="s-btn s-btn--primary" type="button">New ticket</button>
+    </div>
+
+    <div class="s-grid">
+      <article class="s-card">
+        <div class="s-row">
+          <span class="s-pill s-pill--warn s-pill--dot">In review</span>
+          <span class="s-pill">2 of 3 parts approved</span>
+        </div>
+        <div>
+          <h2 class="s-h3">Raise contractor day rates for 2027</h2>
+          <p class="s-muted" style="margin:0">Proposed by Mira, finance agent. Applies when approved.</p>
+        </div>
+        <div class="s-inset s-diff">
+          <div><span>Senior artist</span><span><del>₺9.500</del><ins>₺10.400</ins></span></div>
+          <div><span>QA tester</span><span><del>₺5.200</del><ins>₺5.600</ins></span></div>
+          <div><span>Effective from</span><span><ins>1 Jan 2027</ins></span></div>
+        </div>
+        <div class="s-row">
+          <button class="s-btn s-btn--primary" type="button">Approve</button>
+          <button class="s-btn" type="button">Request changes</button>
+          <button class="s-btn s-btn--ghost" type="button">Open</button>
+        </div>
+      </article>
+
+      <article class="s-card">
+        <div class="s-row" style="flex-wrap:nowrap">
+          <span class="s-avatar">Mi</span>
+          <div style="flex:1;min-width:0">
+            <h2 class="s-h3">Mira</h2>
+            <p class="s-muted" style="margin:0">Finance agent, owned by Deniz</p>
+          </div>
+          <span class="s-pill s-pill--live">Running</span>
+        </div>
+        <div class="s-seg" role="tablist" aria-label="Agent sections">
+          <button type="button" role="tab" aria-selected="true">Overview</button>
+          <button type="button" role="tab" aria-selected="false">Spend</button>
+          <button type="button" role="tab" aria-selected="false">Policy</button>
+        </div>
+        <div class="s-field">
+          <div class="s-kv s-num"><div><span class="s-muted">Budget this month</span><b>$41.20 of $60.00</b></div></div>
+          <div class="s-meter" role="img" aria-label="69% of budget used"><span style="width:68.7%"></span></div>
+        </div>
+        <div class="s-kv s-num">
+          <div><span class="s-muted">Model tier</span><span>Local and mid</span></div>
+          <div><span class="s-muted">Tickets accepted</span><span>18</span></div>
+          <div><span class="s-muted">Probation ends</span><span>26 Nov</span></div>
+        </div>
+      </article>
+
+      <form class="s-card" onsubmit="return false">
+        <h2 class="s-h3">Agent policy</h2>
+        <div class="s-field">
+          <label class="s-label" for="budget">Monthly budget</label>
+          <input class="s-input s-num" id="budget" value="$60.00">
+          <span class="s-hint">The agent pauses when it reaches this amount.</span>
+        </div>
+        <div class="s-field">
+          <label class="s-label" for="tier">Model tier</label>
+          <select class="s-select" id="tier"><option>Local only</option><option selected>Local and mid</option><option>Any model</option></select>
+        </div>
+        <label class="s-switch">Review before marking done <input type="checkbox" id="review" checked></label>
+        <label class="s-check"><input type="checkbox" id="notify" checked> Tell me at 75% of budget</label>
+        <div class="s-field">
+          <label class="s-label" for="note">Note for the owner</label>
+          <textarea class="s-textarea" id="note" placeholder="Why this budget?"></textarea>
+        </div>
+        <div class="s-row">
+          <button class="s-btn s-btn--primary" type="submit">Save changes</button>
+          <button class="s-btn s-btn--outline" type="button">Cancel</button>
+          <span class="s-spacer"></span>
+          <button class="s-btn s-btn--danger" type="button">Offboard</button>
+        </div>
+      </form>
+
+      <article class="s-card demo-wide">
+        <h2 class="s-h3">Open tickets</h2>
+        <div class="s-table-wrap">
+          <table class="s-table">
+            <thead><tr><th>Key</th><th>Ticket</th><th>Assignee</th><th>Status</th><th class="s-right">Cost</th></tr></thead>
+            <tbody>
+              <tr><td class="s-mono s-muted">OPS-142</td><td class="s-wrap">Reconcile October provider invoices</td><td>Mira</td><td><span class="s-pill s-pill--warn s-pill--dot">In review</span></td><td class="s-right">$3.84</td></tr>
+              <tr><td class="s-mono s-muted">ENG-88</td><td class="s-wrap">Fix crash on save in the level editor</td><td>Kai</td><td><span class="s-pill s-pill--soft s-pill--dot">Coding</span></td><td class="s-right">$11.02</td></tr>
+              <tr><td class="s-mono s-muted">LEG-12</td><td class="s-wrap">Draft NDA for Northwind Audio</td><td>Lexi</td><td><span class="s-pill s-pill--bad s-pill--dot">Validator failed</span></td><td class="s-right">$0.61</td></tr>
+              <tr><td class="s-mono s-muted">OPS-139</td><td class="s-wrap">Roster for week 47</td><td>Deniz</td><td><span class="s-pill s-pill--ok s-pill--dot">Done</span></td><td class="s-right">$0.00</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </article>
+
+      <article class="s-card">
+        <h2 class="s-h3">Type</h2>
+        <div class="s-h1">Every agent has an owner</div>
+        <div class="s-h2">Değişiklik isteği İstanbul şubesinde onay bekliyor</div>
+        <p style="margin:0">Body text at the base size. <span class="s-muted">Secondary text sits one step back.</span></p>
+        <p class="s-num" style="margin:0">0123456789 ₺10.400,00 $41.20 68.7%</p>
+        <p class="s-mono" style="margin:0">open_change_request{title} → cr_8f3a2c</p>
+      </article>
+
+      <article class="s-card demo-wide">
+        <h2 class="s-h3">Colors</h2>
+        <div class="demo-swatches" id="swatches"></div>
+      </article>
+    </div>
+  </main>
+</div>
+<script>
+  const names = ["canvas","card","fill","fill-hover","line","text","text-2","primary","primary-hover","soft","live","ok","ok-bg","warn","warn-bg","bad","bad-bg"];
+  document.getElementById("swatches").innerHTML = names.map(n => `<div><i style="background:var(--shiso-${n})"></i>${n}</div>`).join("");
+  const press = (attr, value) => document.querySelectorAll(`[${attr}]`).forEach(b => b.setAttribute("aria-pressed", b.getAttribute(attr) === value));
+  document.querySelectorAll("[data-theme-btn]").forEach(b => b.onclick = () => {
+    const v = b.dataset.themeBtn;
+    if (v === "system") delete document.documentElement.dataset.theme; else document.documentElement.dataset.theme = v;
+    press("data-theme-btn", v);
+  });
+  document.querySelectorAll("[data-density-btn]").forEach(b => b.onclick = () => {
+    document.documentElement.dataset.density = b.dataset.densityBtn;
+    press("data-density-btn", b.dataset.densityBtn);
+  });
+  document.querySelectorAll('[role="tab"]').forEach(b => b.onclick = () =>
+    b.parentElement.querySelectorAll('[role="tab"]').forEach(x => x.setAttribute("aria-selected", x === b)));
+</script>
+</body>
+</html>

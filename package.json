@@ -1,0 +1,16 @@
+{
+  "name": "@shiso/design",
+  "version": "0.1.0",
+  "private": true,
+  "license": "MIT",
+  "description": "Shiso design system: tokens, CSS, Tailwind theme, React Native and Rust/egui themes.",
+  "scripts": {
+    "build": "node scripts/build.mjs"
+  },
+  "exports": {
+    "./css/*": "./packages/css/*",
+    "./tailwind/*": "./packages/tailwind/*",
+    "./native": "./packages/native/src/index.ts",
+    "./fonts/*": "./fonts/*"
+  }
+}

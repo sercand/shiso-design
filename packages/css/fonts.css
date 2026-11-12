@@ -1,0 +1,13 @@
+/* Font faces. Paths are relative to this file inside the repo; copy fonts/ next to your CSS and adjust if you vendor it. */
+@font-face {
+  font-family: "Hanken Grotesk";
+  src: url("../../fonts/HankenGrotesk-Variable.woff2") format("woff2");
+  font-weight: 100 900;
+  font-display: swap;
+}
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("../../fonts/JetBrainsMono-Variable.woff2") format("woff2");
+  font-weight: 100 800;
+  font-display: swap;
+}
