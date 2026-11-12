@@ -124,6 +124,8 @@
   font: var(--shiso-weight-regular) var(--shiso-text-base)/1.45 var(--shiso-font-sans);
   -webkit-font-smoothing: antialiased;
 }
+/* Components set display, which would otherwise beat the hidden attribute. */
+.shiso [hidden] { display: none !important; }
 .shiso :focus-visible { outline: 2px solid var(--shiso-primary); outline-offset: 2px; }
 /* Plain links only: anything with a class (buttons, cards, nav items) styles itself. */
 .shiso a:not([class]) { color: var(--shiso-primary); text-decoration: none; }
