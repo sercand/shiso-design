@@ -9,8 +9,9 @@
   -webkit-font-smoothing: antialiased;
 }
 .shiso :focus-visible { outline: 2px solid var(--shiso-primary); outline-offset: 2px; }
-.shiso a { color: var(--shiso-primary); text-decoration: none; }
-.shiso a:hover { text-decoration: underline; }
+/* Plain links only: anything with a class (buttons, cards, nav items) styles itself. */
+.shiso a:not([class]) { color: var(--shiso-primary); text-decoration: none; }
+.shiso a:not([class]):hover { text-decoration: underline; }
 
 /* Type */
 .s-h1, .s-h2, .s-h3 { margin: 0; font-weight: var(--shiso-weight-semibold); letter-spacing: -0.012em; text-wrap: balance; }
@@ -137,7 +138,7 @@
 .s-table { border-collapse: collapse; width: 100%; font-variant-numeric: tabular-nums; }
 .s-table th { text-align: left; font-weight: var(--shiso-weight-medium); color: var(--shiso-text-2); font-size: 0.92em; }
 .s-table th, .s-table td { padding: calc(var(--shiso-pad) * 0.45) var(--shiso-space-3) calc(var(--shiso-pad) * 0.45) 0; border-bottom: 1px solid var(--shiso-line); white-space: nowrap; }
-.s-table tr:last-child td { border-bottom: 0; }
+.s-table tr:last-child td, .s-table td[rowspan] { border-bottom: 0; }
 .s-table .s-right { text-align: right; padding-right: 0; }
 .s-table .s-wrap { white-space: normal; min-width: 200px; font-weight: var(--shiso-weight-medium); }
 
