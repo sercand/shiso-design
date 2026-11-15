@@ -16,6 +16,16 @@ Never hard-code a color, font, radius or control height; if a value is missing, 
 - Surfaces: lifted. White cards with a soft shadow on a tinted canvas; inputs are filled, with no border at rest.
 - Density: compact on web and desktop (30px controls, 13px text); comfortable on touch (40px, 15px).
 
+## Brand mark
+
+The mark is a monoline leaf. The logo is the leaf followed by the name `shiso`, set in Fraunces 500 with Soft 100 and converted to outlines, with no added gap.
+
+- When the name is needed (headers, sign-in, emails, docs, print), use the logo: `brand/logo.svg`; `logo-dark.svg` on dark surfaces, `logo-reversed.svg` on the green, `logo-mono.svg` to inherit `currentColor`, `logo-stacked*.svg` in square spaces.
+- When only one symbol fits (app icon, favicon, avatar, menu bar, loading), use the leaf alone: `brand/icon*.svg`, or on a tile, `brand/app-icon*.svg` and `brand/favicon.svg`.
+- Leave clear space of half the leaf's height around the logo. The logo is at least 16px tall and the bare leaf at least 14px; below that use the tile.
+- Never put the tile next to the name, re-set the name in another font, recolor the name green, or add effects.
+- The name is lowercase, `shiso`, also in running text. Fraunces appears only in the logo; UI text stays Hanken Grotesk.
+
 ## Where things are
 
 | Need | Use |
@@ -25,6 +35,7 @@ Never hard-code a color, font, radius or control height; if a value is missing, 
 | Tailwind / shadcn app | `packages/css/tokens.css` + `packages/tailwind/theme.css` (maps tokens to the shadcn variable names) |
 | React Native | `packages/native` (`ShisoProvider`, `useShiso`, `Text`, `Button`, `Card`, `Pill`, `Input`, ...) |
 | Rust | `crates/shiso-theme` (`tokens`), feature `egui` for `shiso_theme::egui::install` and widgets |
+| Logo, icon, favicon | `brand/` (SVG; colors are the `primary`, `text` and dark-mode token values) |
 | See it running | `apps/html`, `apps/native`, `apps/egui`. All three show the same screen; keep them in step. |
 
 ## Color roles
